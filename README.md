@@ -1,57 +1,45 @@
-# Mars Rover
+# Zaheen
 
-[`demo`](https://mohammed-taysser.github.io/penta-b-rover-task)
+HTML and CSS task based on a UI/UX design created in Figma
 
-## Problem Description
+[demo](https://mohammed-taysser.github.io/emcan-task)
 
-You are part of the team that explores Mars by sending remotely controlled vehicles to the surface of
-the planet. Develop an API that translates the commands sent from earth to instructions that are
-understood by the rover.
-
-When the rover touches down on Mars, it is initialized with it's current coordinates and the direction
-it is facing. These could be any coordinates, supplied as arguments `(x, y, direction)` e.g. `(4, 2, EAST)`.
-
-## Feathers
+## Features 🎮
 
 - Modern and responsive layout
-- Use minimal need for any custom CSS.
 - Written in TypeScript with predictable static types.
+- Use bootstrap, there should be minimal need for any custom CSS.
 - Lint using Eslint
 
-## Approach
+## Get Start 🚀
 
-You should tackle this problem as you would any real world requirement that would be shipped as
-part of a real product. You should showcase how you work and the way you decompose a problem
-into smaller pieces.
+### Using Git (recommended)
 
-## Task Parts
+```shell
+# clone it with git version control:
+git clone https://github.com/Mohammed-Taysser/emcan-task.git
 
-### Part I (Solved)
+# change directory
+cd emcan-task
+```
 
-The rover is given a command string which contains multiple commands. This string must then be
-broken into each individual command and that command then executed. The valid commands are:
+### Using manual download ZIP
 
-- `F` -> Move forward on current heading
-- `B` -> Move backwards on current heading
-- `L` -> Rotate left by 90 degrees
-- `R` -> Rotate right by 90 degrees
+1. Download repository from [Here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/Mohammed-Taysser/emcan-task)
+2. Uncompressed to your desired directory
 
-An example command might be `FLFFFRFLB`
+## Resources
 
-- Once the full command string has been followed, the rover reports it's current coordinates and heading in the format `(6, 4) NORTH`
-- As Mars is a globe, there is no 'Edge of the world' to fall off, so negative coordinates are valid.
+- [Figma Design](https://www.figma.com/file/h3lLdMZDU8XI6I0WNb5i2I/HomePage?type=design&node-id=0-1&mode=design)
 
-### Part II
+## Contribution 🖐️
 
-Previous missions have had to be aborted due to obstacles that caused damage to the rover. Given a
-set of coordinates for all the known obstacles in the format:
+- Fork it!
+- Create your feature branch: git checkout -b feature-name
+- Commit your changes: git commit -am 'Some commit message'
+- Push to the branch: git push origin feature-name
+- Submit a pull request 😉
 
-`[[1,4], [3,5], [7,4]]`
+## License 📜
 
-When the rover would enter a coordinate with an obstacle, instead stop at the coordinate immediately before and report position,
-heading and Stopped due to collision, e.g. `(3, 4) WEST STOPPED`
-
-### Part III
-
-Given the rover's current position and heading, plus the known obstacles, calculate a command
-string for the rover that will safely move it to a given coordinate avoiding all obstacles.
+MIT © [Mohammed Taysser](https://github.com/mohammed-Taysser/)
